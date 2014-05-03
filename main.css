@@ -1,0 +1,44 @@
+#webpage{
+	position:fixed;
+	padding:10px;
+	border:solid 2px black;
+	background-color:white;
+}
+#SatBriSection{
+	display:inline-block;
+}
+#SatBri{
+	background-color:red;
+}
+#colorPicker, #colorPickerExtra{
+	display:inline-block;
+}
+#hueBar{
+	-webkit-transform:scale(-1);
+}
+#hueSection{
+	display:inline-block;
+}
+#hueSection img:last-of-type, #hueSection img:first-of-type{
+	bottom:-4px;
+}
+#hueSection img:last-of-type, #hueSection img:first-of-type, #selectedColor{
+	position:relative;
+}
+#hueSection img:last-of-type{
+	-webkit-transform:scale(-1);
+	right:4px;
+}
+#hueSection img:first-of-type{
+	left:4px;
+}
+#selectedColor{
+	bottom:-5px;
+	right:10px;
+}
+#color{
+	margin:0 auto;
+	height:77px;
+	width:77px;
+	background-color:black;
+}

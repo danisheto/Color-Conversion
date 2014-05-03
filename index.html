@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="Ethan Seal">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="webpage">
+		<div>
+			<section id="colorPicker">
+				<section id="SatBriSection">
+					<img draggable="false" id="SatBri" src="http://colorpicker.com/images/color-codes/bgGradient.png" class="colorpicker">
+					<img draggable="false" src="http://www.colorpicker.com/images/color-codes/circle-selected-black.gif" id="selectedColor">
+				</section>
+				<section id="hueSection">
+					<img draggable="false" class="arrow" src="http://www.colorpicker.com/images/color-codes/arrow-l.gif">
+					<img draggable="false" id="hueBar" src="http://www.colorpicker.com/images/color-codes/hueBar.png">
+					<img draggable="false" class="arrow" src="http://www.colorpicker.com/images/color-codes/arrow-l.gif">
+				</section>
+			</section>
+			<section id="colorPickerExtra">
+				<div id="color"></div>
+				<table>
+					<tbody>
+						<tr><td>Hue:</td><td><input max="360" min="0" type="number" maxlength="3" class="colorPickerInput HSB" id="hueInput" value="360"></td></tr>
+						<tr><td>Saturation:</td><td><input max="100" min="0" type="number" maxlength="3" class="colorPickerInput HSB" id="saturationInput" value="100"></td></tr>
+						<tr><td>Brightness:</td><td><input max="100" min="0" type="number" maxlength="3" class="colorPickerInput HSB" id="brightnessInput" value="0"></td></tr>
+						<tr><td>Red:</td><td><input maxlength="3" size="6" class="colorPickerInput RGB" id="redInput" value="00"></td></tr>
+						<tr><td>Green:</td><td><input maxlength="3" size="6" class="colorPickerInput RGB" id="greenInput" value="00"></td></tr>
+						<tr><td>Blue:</td><td><input maxlength="3" size="6" class="colorPickerInput RGB" id="blueInput" value="00"></td></tr>
+					</tbody>
+				</table>
+				<button id="doneColorPicker">Done</button>
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="colorConvert.js"></script>
+</body>
+</html>
