@@ -140,8 +140,15 @@ function updateHSBRGB(){
 				selectedColor.style.right=(255-SatBriPosX)+10+"px";
 				selectedColor.style.bottom=(255-SatBriPosY)-5+"px";
 				updateHSBRGB();
+				this.onblur=function(){
+					 if((this.id=="hueInput" && parseInt(this.value)>360) || ((this.id=="saturationInput" || this.id=="brightnessInput") && parseInt(this.value)>100)){
+					 	this.value=last;
+					 	document.getElementsByClassName("HSB")[i].oninput.call();
+					 }
+				}
 			}else{
 				this.onblur=function(){
+					console.log(parseInt(this.value)>360)
 					if(this.value.length<1){
 						this.value=last;
 					}
@@ -164,6 +171,12 @@ function updateHSBRGB(){
 				}
 				SatBriPosX=(saturation/100)*255;
 				SatBriPosY=255-((brightness/100)*255);
+				this.onblur=function(){
+					 if(this.value>255){
+					 	this.value=last;
+					 	document.getElementsByClassName("HSB")[i].oninput.call();
+					 }
+				}
 				selectedColor.style.right=(255-SatBriPosX)+10+"px";
 				selectedColor.style.bottom=(255-SatBriPosY)-5+"px";
 				hueInput.value=hue.toFixed(0);
@@ -172,7 +185,7 @@ function updateHSBRGB(){
 				color.style.backgroundColor="rgb("+redInput.value+","+greenInput.value+","+blueInput.value+")";
 			}else{
 				this.onblur=function(){
-					if(this.value.length<1){
+					if(this.value.length<1 || parseInt(this.value)<256){
 						this.value=last;
 					}
 				}
