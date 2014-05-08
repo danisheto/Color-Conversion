@@ -65,8 +65,8 @@ function updateHSBRGB(){
 	var SatBriPosX,SatBriPosY;
 	function SatBriSectionMove(e){
 		//possibly one or two pixels off
-		SatBriPosX=e.pageX-SatBriSection.offsetLeft-10;
-		SatBriPosY=e.pageY-SatBriSection.offsetTop-11;
+		SatBriPosX=e.pageX-SatBriSection.offsetLeft-SatBriSection.parentNode.offsetLeft;
+		SatBriPosY=e.pageY-SatBriSection.offsetTop-SatBriSection.parentNode.offsetTop;
 		if(SatBriPosX>=1 && SatBriPosX<=255 && SatBriPosY>=1 && SatBriPosY<=255){
 			selectedColor.style.right=(255-SatBriPosX)+10+"px";
 			selectedColor.style.bottom=(255-SatBriPosY)-5+"px";

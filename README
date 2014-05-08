@@ -1,1 +1,1 @@
-Color Conversion functions
+Color Picker that uses HSBtoRGB, RGBtoHSB, and HSBtoHSL color conversion functions
